@@ -7,14 +7,14 @@ export default function AuthCallback() {
 
   useEffect(() => {
     const handleAuthRedirect = async () => {
-      const { error } = await supabase.auth.exchangeCodeForSession(window.location.href);
+      const { error } = await supabase.auth.getSessionFromUrl(); // ✅ 正確方法
 
       if (error) {
         console.error("登入回調失敗：", error.message);
         alert("登入失敗：" + error.message);
       } else {
         console.log("登入成功");
-        navigate("/"); // 登入成功後回首頁
+        navigate("/"); // ✅ 登入成功後導回首頁
       }
     };
 
