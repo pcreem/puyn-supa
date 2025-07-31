@@ -1,0 +1,23 @@
+# 忽略 node_modules 安裝套件
+node_modules/
+
+# 忽略打包後的 dist 資料夾（GitHub Pages 可選擇不忽略）
+dist/
+
+# 環境變數檔案（若有設定）
+.env
+.env.local
+.env.*.local
+
+# 系統與編輯器快取檔案
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VS Code 設定（可選）
+.vscode/
+
+# Mac 快取
+Thumbs.db
